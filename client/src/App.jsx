@@ -3,7 +3,7 @@ import ToDo from "./components/ToDo";
 import { addToDo, getAllToDo, updateToDo, deleteToDo } from "./utils/HandleApi";
 
 
-function App() {
+export default function App2() {
 
   const [toDo, setToDo] = useState([])
   const [text, setText] = useState("")
@@ -60,5 +60,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

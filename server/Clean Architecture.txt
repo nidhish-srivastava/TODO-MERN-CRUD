@@ -1,0 +1,6 @@
+The main aim of this is to decouple the business logic from the external functionalities
+
+Follow modular way of creating stuff,dont put everything at the single place
+
+If u see any express code inside your business logic then we are breaking this paradigm
+

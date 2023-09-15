@@ -34,7 +34,6 @@ const updateToDo = (toDoId, text, setToDo, setText, setIsUpdating) => {
             getAllToDo(setToDo)
         })
         .catch((err) => console.log(err))
-
 }
 
 const deleteToDo = (_id, setToDo) => {
