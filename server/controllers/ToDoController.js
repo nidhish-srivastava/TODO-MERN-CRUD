@@ -1,21 +1,25 @@
-const ToDoModel = require("../models/ToDoModel");
+const ToDoModel = require("../db/model");
 
-module.exports.getToDo = async (req, res) => {
+const getToDo = async (req, res) => {
     return await ToDoModel.find();
 }
 
-module.exports.saveToDo = (text) => {
+const saveToDo = (text) => {
 
     return ToDoModel.create({ text })
 }
 
-module.exports.deleteToDo = (_id) => {
+const deleteToDo = (_id) => {
 
     return ToDoModel
         .findByIdAndDelete(_id)
 }
 
-module.exports.updateToDo = (_id, text) => {
+const updateToDo = (_id, text) => {
     return ToDoModel
         .findByIdAndUpdate(_id, { text })
+}
+
+module.exports = {
+    saveToDo,deleteToDo,updateToDo,getToDo
 }
